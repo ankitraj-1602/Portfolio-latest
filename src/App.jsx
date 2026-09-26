@@ -1,18 +1,18 @@
 import { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
-import { darkTheme, lightTheme } from './utils/Themes.js'
-import Navbar from "./components/Navbar";
+import { darkTheme, lightTheme } from './utils/Themes'
+import Navbar from "./components/Navbar/index";
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import HeroSection from "./components/HeroSection";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import ProjectDetails from "./components/ProjectDetails";
+import HeroSection from "./components/HeroSection/index";
+import About from "./components/About/index";
+import Skills from "./components/Skills/index";
+import Projects from "./components/Projects/index";
+import Contact from "./components/Contact/index";
+import Footer from "./components/Footer/index";
+import Experience from "./components/Experience/index";
+import Education from "./components/Education/index";
+import ProjectDetails from "./components/ProjectDetails/index.jsx";
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -56,3 +56,4 @@ function App() {
 }
 
 export default App;
+
