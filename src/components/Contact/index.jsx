@@ -133,10 +133,10 @@ const handleSubmit = (e) => {
 
   emailjs
     .sendForm(
-      'service_tox7kqs',
-      'template_nv7k7mj',
+      'service_uxa6djk',
+      'template_ry7oibl',
       form.current,
-      'SybVGsYS52j2TfLbi'
+      'n0eZ4d2pWoaCwaOPt'
     )
     .then(
       (result) => {
