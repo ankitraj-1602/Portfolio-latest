@@ -128,16 +128,27 @@ const Contact = () => {
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-      .then((result) => {
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      'service_tox7kqs',
+      'template_nv7k7mj',
+      form.current,
+      'SybVGsYS52j2TfLbi'
+    )
+    .then(
+      (result) => {
+        console.log("SUCCESS:", result.status, result.text);
         setOpen(true);
         form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+      },
+      (error) => {
+        console.error("EMAILJS ERROR:", error);
+      }
+    );
+};
 
 
 
